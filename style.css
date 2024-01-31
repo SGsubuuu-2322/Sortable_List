@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
+:root {
+  --border-color: #e3e5e4;
+  --background-color: #c3c7ca;
+  --text-color: #34444f;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,4 +19,44 @@ body {
   justify-content: flex-start;
   height: 100vh;
   margin: 0;
+}
+
+.draggable-list {
+  list-style-type: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0;
+}
+
+.draggable-list li {
+  background-color: #fff;
+  display: flex;
+  flex: 1;
+}
+
+.draggable-list li:not(:last-of-type) {
+  border: 1px solid var(--border-color);
+}
+
+.draggable-list .number {
+  height: 60px;
+  width: 60px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+}
+
+.draggable-list .person-name {
+  margin: 0 20px 0 0;
+}
+
+.draggable {
+  cursor: pointer;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
 }
